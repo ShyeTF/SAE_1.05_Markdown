@@ -3,17 +3,17 @@ import webbrowser
 import matplotlib.pyplot as plt
 from collections import Counter
 import os
-import csv  # Pour la gestion des fichiers CSV
+import csv 
 
-# Lecture du fichier
+#################### Lecture du fichier
 try:
     with open(r"DumpFile.txt", "r", encoding='utf-8') as fh:
         ress = fh.read().split('\n')
 
-    valeur = []
-    ip_sources = []
-    ip_destinations = []
-    errors = []  # Liste pour stocker les erreurs avec leur cause
+    valeur = []             ######## Liste pour stocker les valeurs
+    ip_sources = []         ######## Liste pour stocker les IP sources
+    ip_destinations = []    ######## Liste pour stocker les IP destinations
+    errors = []             ######## Liste pour stocker les erreurs avec leurs causes
 
     def lecture():
         for row in ress:
